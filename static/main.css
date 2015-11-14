@@ -10,11 +10,11 @@ button{
     width:90px;
     border-radius: 20px;
     font-size:25px;
-    color:red;
+    color:black;
     background-color:#0099FF;
 }
 #title{
-    margin-top: 40px;
+    margin-top: 200px;
     text-align:center;
 	font-family:skia;
 	font-size:70px;
