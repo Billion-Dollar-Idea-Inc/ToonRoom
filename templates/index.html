@@ -3,12 +3,12 @@
     
     <head>
         <title id="title">TUNEROOM</title>
-        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
         <h1 id="title">TUNEROOM</h1>
         <div id="button">
-            <button type="button">Join</button>
+            <a href = "chat"><button type="button">Join</button></a>
         </div>
     </body>
 </html>
