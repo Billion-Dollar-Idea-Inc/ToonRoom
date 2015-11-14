@@ -14,7 +14,12 @@ button{
     background-color:#0099FF;
 }
 #title{
+    margin-top: 40px;
     text-align:center;
-    font-family:skia;
-    font-size:40px;
+	font-family:skia;
+	font-size:70px;
+}
+#input{
+	height:20px;
+	width:500px;
 }
