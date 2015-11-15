@@ -71,11 +71,7 @@ function back_to_plus(){
 	document.getElementById('input').value = "";
 	document.getElementById('plus_sign').style.visibility = "visible";
 	document.getElementById('input').style.visibility = "hidden";
-	update_video(link.substring(32));
-	//export_link(link);
-}
-
-function get_video(){
+	export_link(link);
 }
 
 function update_video(id){
@@ -90,8 +86,9 @@ function enqueue(id){
 function export_link(link){
 	//link is gloabl and will be touched here
 	//stuff sent to python land
-	xhttp.open("POST", "crudder.py", true);
-	xhttp.send(link);
+	var id = link.substring(32);
+	console.log(id);
+	httpOut("http://localhost:5000/addsong/" + room + "/" + id);
 }
 
 function dequeue(){
@@ -103,7 +100,7 @@ function dequeue(){
 function print_table(){
 	console.log(vidArray);
 	var myTable = "";
-	myTable = "<table><tr><td style='width: 100px; color: cyan;'>Next Song</td></tr>";
+	myTable = "<table><tr><td style='width: 100px; color: white;'>Next Song</td></tr>";
 	myTable+="<tr><td style='width: 100px;                   '>---------------</td></tr>";
 	
 	for (var i=0; i<vidArray.length; i++) {
@@ -113,3 +110,30 @@ function print_table(){
 	myTable+="</table>";
 	document.getElementById('tablePrint').innerHTML = myTable;
 }
+
+function httpOut(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    var response = xmlHttp.responseText;
+}
+
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    var response = xmlHttp.responseText;
+	console.log(response);
+	response = JSON.parse(response);
+	for( var i = 0; i < response.length; i++){
+		if(vidArray.indexOf(response[i]) < 0){
+			vidArray.push(response[i]);
+		}
+	}	
+}
+
+setTimeout(httpGet("http://localhost:5000/queue/" + room), 1500);
+
+
