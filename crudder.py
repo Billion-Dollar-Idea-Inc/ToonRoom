@@ -30,6 +30,20 @@ class Crudder():
 			self.c.execute("INSERT INTO rooms VALUES({room_num}, 1)".format(room_num = num))
 			return num
 
+		def get_queue(self, room):
+			self.c.execute("SELECT song FROM songs WHERE room={rm}".format(rm = int(room)))
+			fetch = self.c.fetchall()
+			arr = []
+			for x in fetch:
+				arr.append(x[0])
+			return arr
+
+		def add_song(self, room, song):
+			print("im gonna try")
+			print "im gonna try this: ", "INSERT INTO songs VALUES({rm}, \"{sg}\")".format(rm = int(room), sg = song)
+			self.c.execute("INSERT INTO songs VALUES({rm}, \"{sg}\")".format(rm = int(room), sg = song))
+			return "hello world"
+
 		def get_room(self):
 			self.c.execute("SELECT * FROM rooms")
 			fetch = self.c.fetchall()
