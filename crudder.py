@@ -11,10 +11,12 @@ class Crudder():
 		def get_room(self):
 			self.c.execute("SELECT * FROM rooms")
 			fetch = self.c.fetchall()
+			rooms = []
 			for room in range(0, len(fetch)):
-					if room[1] < 10:
-						add_to_room(room[1])
-						return room[0]
+					rooms.append(fetch[room][0])
+					if fetch[room][1] < 10:
+						self.add_to_room(fetch[room][1])
+						return fetch[room][0]
 			return create_room(rooms)
 
 		def add_to_room(self, room):

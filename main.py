@@ -23,6 +23,5 @@ def chat(room):
 
 
 if __name__ == '__main__':
-	init_db()
-	app.debug = True
+	#app.debug = True
 	app.run(host='0.0.0.0')# makes server publicly available
