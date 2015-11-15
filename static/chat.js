@@ -80,7 +80,7 @@ function get_video(){
 }
 
 function update_video(id){
-	enqueue(id);
+	//enqueue(id);
 	video = document.getElementById('video');
     onYouTubeIframeAPIReady(id)
 }
