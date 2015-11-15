@@ -18,7 +18,6 @@ class Crudder():
 			print self.c.fetchall()
 
 		def create_room(self, rooms):
-			print "im in create room"
 			while True:
 				num = random.randint(10000, 99999)
 				good = True
@@ -39,8 +38,6 @@ class Crudder():
 					rooms.append(fetch[room][0])
 					if fetch[room][1] < 3:
 						self.add_to_room(fetch[room])
-						print "imma get outcha"
 						return fetch[room][0]
-			print "im tryin"
-			room_num = create_room(rooms)
+			room_num = self.create_room(rooms)
 			return room_num
