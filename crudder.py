@@ -14,13 +14,14 @@ class Crudder():
 			rooms = []
 			for room in range(0, len(fetch)):
 					rooms.append(fetch[room][0])
-					if fetch[room][1] < 10:
-						self.add_to_room(fetch[room][1])
+					if fetch[room][1] < 3:
+						self.add_to_room(fetch[room])
 						return fetch[room][0]
 			return create_room(rooms)
 
 		def add_to_room(self, room):
-			pass
+			self.c.execute("UPDATE rooms SET users={num} WHERE number={roomnum}".format(num=room[1]+1, roomnum=room[0]))
+
 
 		def create_room(self, rooms):
 			while True:
@@ -33,6 +34,3 @@ class Crudder():
 				if good:
 					break
 			self.c.execute("INSERT INTO rooms VALUES({room_num}, 1)".format(room_num = num))
-
-c = Crudder()
-c.get_room()
