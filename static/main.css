@@ -1,24 +1,36 @@
-body{
-    background-color: #4da5ff;
+html{   
+    width: 100%;
+    height: 100%;
 }
+
+body{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .70) 59%, rgba(0, 0, 0, 0.90) 100%), url('images/truebackground.jpg') no-repeat;
+    background-size: cover;
+}
+
 #button{
     text-align: center;
-    margin-top:100px;
+    padding-top: 10px;
 }
-button{
-    height:50px;
-    width:90px;
-    border-radius: 20px;
-    font-size:25px;
-    color: #4da5ff;
-    background-color: #ffffff;
+
+#join{
+    height:35px;
+    width:70px;
+    border-radius: 30px;
+    font-size:15px;
+    color: white;
+    background-color: gray;
+    text-align: center;
 }
+
 #title{
-	font-family: arial;
+	font-family: monospace;
 	font-size: 100px;
     text-shadow: 4px 4px #000000;
     color: white;
     text-align: center;
+    font-weight: normal;
+    letter-spacing: .5px;
 }
 #tagline{
     

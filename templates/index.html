@@ -6,12 +6,14 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
     </head>
     <body>
-        <h1 id="title">TuneRoom</h1>
-        <p id="tagline">Making the world a better place through anonymous music sharing.</p>
-        <div id="button">
-            <form action="{{ url_for('join') }}" method="POST">
-                <button name="join">Join</button>
-            </form>
+        <div class="text">
+            <h1 id="title">placeholder</h1>
+            <p id="tagline">making the world a better place through anonymous music sharing.</p>
+            <div id="button">
+                <form action="{{ url_for('join') }}" method="POST">
+                    <button id="join">join</button>
+                </form>
+            </div>
         </div>
     </body>
 </html>
