@@ -10,8 +10,6 @@ class VideoParser:
 					self.video = pafy.new(url)
 					if self.video.category != "music":
 						print "not a good url"
-					else:
-						self.video = ""
 				except:
 					print "not a good url"
 

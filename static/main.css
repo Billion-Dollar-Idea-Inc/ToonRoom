@@ -1,5 +1,5 @@
 body{
-    background-image: url(images/back1.jpg);
+    background-color: #4da5ff;
 }
 #button{
     text-align: center;
@@ -10,11 +10,20 @@ button{
     width:90px;
     border-radius: 20px;
     font-size:25px;
-    color:black;
-    background-color:#0099FF;
+    color: #4da5ff;
+    background-color: #ffffff;
 }
 #title{
-	font-family:skia;
-	font-size:100px;
-    text-align:center;
+	font-family: arial;
+	font-size: 100px;
+    text-shadow: 4px 4px #000000;
+    color: white;
+    text-align: center;
+}
+#tagline{
+    
+    font-family: arial;
+    font-size: 20px;
+    text-align: center;
+    color: white;
 }
