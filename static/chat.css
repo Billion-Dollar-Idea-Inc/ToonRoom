@@ -12,15 +12,19 @@ body{
 }
 #add{
 	height:20px;
-	float:right;
-	margin:20px;
+    text-align:right;
+    margin-right:300px;
 }
 #input{
     visibility:hidden;
 	width:300px;
+    right:100px;
+    top:-10px;
 }
 #submit{
     visibility:hidden;
+    right:100px;
+    top:-10px;
 }
 #plus_sign{
  
