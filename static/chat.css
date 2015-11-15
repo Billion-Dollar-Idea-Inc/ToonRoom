@@ -2,12 +2,6 @@ body{
     background: linear-gradient(to bottom, rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .70) 59%, rgba(0, 0, 0, 0.90) 100%), url('images/truebackground.jpg') no-repeat;
     background-size: cover;
 }
-#title{
-    float:left;
-    font-size:30px;
-    color: #99ccff;
-    margin-left:50px;
-}
 #add{
     /*height:100px;*/
     text-align:right;
@@ -46,9 +40,17 @@ input{
 #player{
     width:600px;
     height:400px;
-    margin:0 auto;
-<<<<<<< HEAD
+    margin-left:200px;
 }
-=======
+#tablePrint{
+    float: left;
+    border: 1px solid #ffffff;
+    background-color: gray;
+    opacity: .7;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
 }
->>>>>>> f5729d05ec9e7f6096c032d6d49de4da4a27bbfa
+th{
+    background-color: white;
+}
