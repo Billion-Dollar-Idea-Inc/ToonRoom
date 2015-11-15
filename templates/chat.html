@@ -2,7 +2,7 @@
     <head>
         <title id="title">THIS IS THE ROOM</title>
         <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='chat.css')}}">
-        <script src="chat.js"></script>
+        <script type="text/javascript" src="{{url_for('static', filename='chat.js')}}"></script>
     </head>
     <body>
 
@@ -10,8 +10,9 @@
             <h1 id="title">You're in room {{ room_num }}</h1>
 
     	<div id="add">
+            <button id="plus_sign" onclick = "revealBox();">+</button>
     		<form>
-    			<input type="text" onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()"  id="input"><input type="submit" id="submit" value="Submit" onClick = "takeInput();">
+                <input type="text" onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()" id="input"><input id="submit" type="submit" value="Submit" onclick = "back_to_plus();">
     		</form>
     	</div>
 
