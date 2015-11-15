@@ -1,29 +1,54 @@
 body{
-    background-image: url(images/back1.jpg);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .70) 59%, rgba(0, 0, 0, 0.90) 100%), url('images/truebackground.jpg') no-repeat;
+    background-size: cover;
 }
 #title{
     float:left;
     font-size:30px;
-    color:;
-    margin-left:20px;
+    color: #99ccff;
+    margin-left:50px;
 }
 #add{
-    height:100px;
+    /*height:100px;*/
     text-align:right;
     margin-right:300px;
-    margin-top:30px;
 }
 #input{
     visibility:hidden;
     width:300px;
     right:100px;
-    top:-10px;
+    /*top:-10px;*/
 }
-#plus_sign{
-    width:50px;
+h1{
+    -webkit-margin-before: 0.00em;
+    -webkit-margin-after: 0.00em;
+}
+input{
+    -moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+    -webkit-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+    background-color: gray;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius: 15px;
+    border: 3px solid #99ccff;
+    display:inline-block;
+    cursor:pointer;
+    color: #99ccff;
+    font-family: arial;
+    font-size:13px;
+    font-weight:bold;
+    padding:5px 15px;
+    text-decoration:none;
+    text-shadow:0px -1px 0px #2b665e;
+    opacity: .6;
 }
 #player{
     width:600px;
     height:400px;
     margin:0 auto;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f5729d05ec9e7f6096c032d6d49de4da4a27bbfa
