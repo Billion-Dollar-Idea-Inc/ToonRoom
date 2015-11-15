@@ -9,16 +9,16 @@
         <div="page">
             <h1 id="title">You're in room {{ room_num }}</h1>
 
-    	<div id="add">
-            <button id="plus_sign" onclick = "revealBox();">+</button>
-                <input type="text" onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()" id="input">
-				<input id="submit" type="button" value="Submit" onclick="back_to_plus();">
-    	</div>
+        <div id="add">
+            <input type="text" onkeydown="if (event.keyCode == 13) document.getElementById('plus_sign').click()" id="input"><input type="button" id="plus_sign" onclick = "revealBox();" value= "+"></button>
+        </div>
 
         <div id="queue">
         </div>
 
         <div id="video">
+        <article>
+        </article>
         </div>
         <div id="users">
         
