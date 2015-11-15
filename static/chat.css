@@ -1,3 +1,6 @@
+html{
+    color: white;
+}
 body{
     background: linear-gradient(to bottom, rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .70) 59%, rgba(0, 0, 0, 0.90) 100%), url('images/truebackground.jpg') no-repeat;
     background-size: cover;
@@ -25,10 +28,10 @@ input{
     -moz-border-radius:5px;
     -webkit-border-radius:5px;
     border-radius: 15px;
-    border: 3px solid #99ccff;
+    border: 3px solid #ffffff;
     display:inline-block;
     cursor:pointer;
-    color: #99ccff;
+    color: white;
     font-family: arial;
     font-size:13px;
     font-weight:bold;
@@ -40,17 +43,23 @@ input{
 #player{
     width:600px;
     height:400px;
-    margin-left:200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -300px;
+    text-align: center;
 }
 #tablePrint{
     float: left;
-    border: 1px solid #ffffff;
+    border: 3px solid #ffffff;
     background-color: gray;
-    opacity: .7;
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
-    padding: 5px;
-}
-th{
-    background-color: white;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20;
+    opacity: .6;
+    text-decoration: bold;
 }
