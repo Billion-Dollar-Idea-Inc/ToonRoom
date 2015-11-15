@@ -14,7 +14,15 @@ button{
     background-color:#0099FF;
 }
 #title{
+    float:left;
 	font-family:skia;
-	font-size:100px;
-    text-align:center;
+	font-size:20px;
+}
+#add{
+	height:20px;
+	float:right;
+	margin:20px;
+}
+#input{
+	width:300px;
 }
