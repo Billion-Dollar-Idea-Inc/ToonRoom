@@ -23,11 +23,6 @@ function onYouTubeIframeAPIReady(id) {
         });
 		}
 	}
-	if(player && event.data == YT.PlayerState.ENDED){
-		var newID = dequeue();
-		player.stopVideo;
-		player.loadVideoById(newID);
-	}
 }
 
 // 4. The API will call this function when the video player is ready.
@@ -47,10 +42,10 @@ function onPlayerStateChange(event) {
 	}
 if(event.data == YT.PlayerState.ENDED){
 }
-if (event.data == YT.PlayerState.PLAYING && !done) {
+/*if (event.data == YT.PlayerState.PLAYING && !done) {
   setTimeout(stopVideo, 6000);
   done = true;
-}
+}*/
 }
 
 function stopVideo() {
