@@ -4,7 +4,7 @@ import crudder
 import random
 import sqlite3
 
-
+crud = crudder.Crudder()
 app = Flask(__name__)
 
 @app.route('/')
@@ -13,7 +13,7 @@ def index():
 
 @app.route('/join', methods=['POST'])
 def join():
-	room_num = crudder.Crudder().get_room()
+	room_num = crud.get_room()
 	return redirect(url_for('chat', room=room_num))
 
 @app.route('/chat/<room>', methods =['GET', 'POST'])
