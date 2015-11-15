@@ -8,7 +8,9 @@
     <body>
         <h1 id="title">TUNEROOM</h1>
         <div id="button">
-            <a href = "chat"><button type="button">Join</button></a>
+            <form action="{{ url_for('join') }}" method="POST">
+                <button name="join">Join</button>
+            </form>
         </div>
     </body>
 </html>
