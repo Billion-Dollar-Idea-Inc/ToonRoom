@@ -5,14 +5,6 @@ body{
     text-align: center;
     margin-top:100px;
 }
-button{
-    height:50px;
-    width:90px;
-    border-radius: 20px;
-    font-size:25px;
-    color:black;
-    background-color:#0099FF;
-}
 #title{
     float:left;
 	font-family:skia;
@@ -24,5 +16,12 @@ button{
 	margin:20px;
 }
 #input{
+    visibility:hidden;
 	width:300px;
+}
+#submit{
+    visibility:hidden;
+}
+#plus_sign{
+ 
 }
