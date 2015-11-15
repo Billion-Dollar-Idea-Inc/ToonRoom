@@ -11,7 +11,6 @@ var player;
 function onYouTubeIframeAPIReady(id) {
 	if (id) {
 		if (player) {
-			enqueue(id);
 		} else {
 		  player = new YT.Player('player', {
           	height: '390',
@@ -21,7 +20,7 @@ function onYouTubeIframeAPIReady(id) {
             	'onReady': onPlayerReady,
             	'onStateChange': onPlayerStateChange
           }
-        });
+          });
 		}
 	}
 }
@@ -86,7 +85,6 @@ function update_video(id){
 }
 function enqueue(id){
 	vidArray.push(id);
-	print_table()
 }
 
 function export_link(link){
@@ -104,7 +102,8 @@ function dequeue(){
 //Print table of queue
 function print_table(){
 	console.log(vidArray);
-	var myTable= "<table><tr><td style='width: 100px; color: cyan;'>Next Song</td></tr>";
+	var myTable = "";
+	myTable = "<table><tr><td style='width: 100px; color: cyan;'>Next Song</td></tr>";
 	myTable+="<tr><td style='width: 100px;                   '>---------------</td></tr>";
 	
 	for (var i=0; i<vidArray.length; i++) {
